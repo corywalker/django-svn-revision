@@ -1,9 +1,11 @@
+from django.conf import settings
+
 def get_revision():
     from subprocess import Popen, PIPE
     import re, os
 
     try:
-        stdio = Popen(['svnversion', os.path.join(os.path.abspath(os.path.dirname(__file__)), "../../")], stdout=PIPE, stderr=PIPE)
+        stdio = Popen(['svnversion', settings.PROJECT_PATH], stdout=PIPE, stderr=PIPE)
         comm = stdio.communicate()
         stdout = comm[0].strip()
         matched = re.match(':?(\d*).*[MS]?$', stdout)
