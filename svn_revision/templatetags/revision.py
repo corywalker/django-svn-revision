@@ -1,5 +1,6 @@
 # $Id: django-revision.py $
-# Authors: Sean Auriti <sa@alexanderinteractive.com>, David Napolitan <dn@alexanderinteractive.com>
+# Authors: Sean Auriti <sa@alexanderinteractive.com>, David Napolitan <dn@alexanderinteractive.com>,
+#          Cory Walker <cwalker32@gmail.com>
 
 """
 Creates a template tag called {% revision %} that returns the current svn version.
